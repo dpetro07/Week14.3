@@ -1,0 +1,17 @@
+<h1>Temperature APP</h1>
+<h3>Record how the room feels, and when you felt it.</h3>
+<div class="row">
+  <div class="col l5 offset-l2">
+    {{#each temps}}
+
+    <li>The ID: {{this.id}} The Temp: {{this.temperature}} The Date: {{this.the_date}}</li>
+
+    {{/each}}
+  </div>
+</div>
+<form method="POST" action="/">
+  <input type="text" name="temperature"></input>
+    <button type="submit" class="btn-floating btn-large waves-effect waves-light red">Hot</button>
+    <button type="submit" class="btn-floating btn-large waves-effect waves-light blue">Cold</button>
+    <button type="submit" class="btn-floating btn-large waves-effect waves-light green">Perf</button>
+</form>
